@@ -1,17 +1,237 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="伝統屋 暁 2026年新春福袋。未発売新作入り、完全受注生産の特別なアクセサリーセット。" />
-    <title>伝統屋 暁｜福袋 2026</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伝統屋 暁｜福袋 2026</title>
+  <meta name="description" content="伝統屋 暁 2026年新春福袋。未発売新作入り、完全受注生産の特別なアクセサリーセット。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        伝統屋 <span>暁</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="hero-year">二〇二六 新春福袋</span>
+        <h1 class="hero-title">
+          伝統を纏う、<br>
+          一年の始まり。
+        </h1>
+        <p class="hero-subtitle">
+          未発売新作を必ず封入。<br>
+          すべて数量限定、完全受注生産でお届けする<br>
+          「伝統屋 暁」の特別な贈り物。
+        </p>
+
+        <div class="hero-image">
+          <img src="assets/lucky-bag.png" alt="Traditional Lucky Bag" style="width: 100%;">
+        </div>
+
+        <!-- Pre-Sale Banner -->
+        <div id="pre-sale-banner">
+          <p style="margin-bottom: 1rem;">
+            販売開始：2025年12月15日(月) 12:00〜 <br>
+            <span style="font-size: 0.9rem; color: #888;">※プレミアムは抽選受付となります</span>
+          </p>
+          <button class="btn btn-disabled" disabled>
+            COMING SOON
+          </button>
+        </div>
+
+        <!-- On-Sale Banner (Hidden by default) -->
+        <div id="on-sale-banner" style="display: none;">
+          <p style="color: var(--color-accent); font-weight: bold; margin-bottom: 1rem; font-size: 1.2rem;">
+            【期間：12/15〜12/20】先着順・売切終了
+          </p>
+          <button class="btn btn-primary"
+            onclick="document.getElementById('lineup').scrollIntoView({ behavior: 'smooth' })">
+            今すぐ購入する
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16" style="background: rgba(255,255,255,0.02)">
+      <div class="container">
+        <h2 class="section-title">暁のお約束</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">✦</div>
+            <h3 class="feature-title">未発売新作を封入</h3>
+            <p class="feature-desc">
+              この福袋でしか手に入らない、<br>あるいは一般発売前の新作が<br>必ず1点含まれます。
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">↺</div>
+            <h3 class="feature-title">安心の交換保証</h3>
+            <p class="feature-desc">
+              色味や、ピアス・イヤリングのタイプが<br>合わない場合、1回に限り<br>無償で交換対応いたします。
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⚒</div>
+            <h3 class="feature-title">完全受注生産</h3>
+            <p class="feature-desc">
+              ご注文をいただいてから、<br>職人が一つひとつ丁寧に仕上げます。<br>お届けまで約30日お待ちください。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lineup Section -->
+    <section class="py-16 container" id="lineup">
+      <h2 class="section-title">新春 福袋一覧</h2>
+      <p class="text-center" style="margin-bottom: 3rem; color: var(--color-text-muted);">
+        ご予算や用途に合わせて選べる4つのラインナップ。<br>
+        すべてのセットに「未発売新作」が含まれます。
+      </p>
+
+      <div class="lineup-grid" id="product-container">
+        <!-- Products will be rendered here by JS or statically defined below -->
+
+        <!-- UME -->
+        <div class="product-card" data-id="ume" data-limit="20">
+          <div class="card-badge remaining-badge" style="display: none; background: var(--color-accent);">残り <span
+              class="count">20</span> 個</div>
+          <h3 class="card-title">梅 (UME)</h3>
+          <p class="card-target">初めての方／ライト層</p>
+          <div class="card-price">14,800円 <span style="font-size: 0.8rem; font-weight: normal">(税込)</span></div>
+          <div class="total-value-box">
+            <p class="total-value-text">中身総額 25,000円 相当</p>
+          </div>
+          <ul class="card-details">
+            <li><span>✦ 初めての方に最適</span></li>
+            <li><span>✦ 普段使いしやすいアイテム</span></li>
+            <li><span>✦ 未発売新作1点確定封入</span></li>
+          </ul>
+          <div style="margin-top: 2rem;">
+            <button class="btn btn-disabled btn-presale" style="width: 100%;" disabled>COMING SOON</button>
+            <button class="btn btn-primary btn-onsale" style="width: 100%; display: none;">カートに入れる</button>
+          </div>
+        </div>
+
+        <!-- TAKE -->
+        <div class="product-card" data-id="take" data-limit="15">
+          <div class="card-badge remaining-badge" style="display: none; background: var(--color-accent);">残り <span
+              class="count">15</span> 個</div>
+          <h3 class="card-title">竹 (TAKE)</h3>
+          <p class="card-target">リピーター／メイン層</p>
+          <div class="card-price">25,800円 <span style="font-size: 0.8rem; font-weight: normal">(税込)</span></div>
+          <div class="total-value-box">
+            <p class="total-value-text">中身総額 37,000円 相当</p>
+          </div>
+          <ul class="card-details">
+            <li><span>✦ リピーター様に人気</span></li>
+            <li><span>✦ 充実のラインナップ</span></li>
+            <li><span>✦ 未発売新作1点確定封入</span></li>
+            <li><span>✦ コーディネートの幅が広がるセット</span></li>
+          </ul>
+          <div style="margin-top: 2rem;">
+            <button class="btn btn-disabled btn-presale" style="width: 100%;" disabled>COMING SOON</button>
+            <button class="btn btn-primary btn-onsale" style="width: 100%; display: none;">カートに入れる</button>
+          </div>
+        </div>
+
+        <!-- MATSU -->
+        <div class="product-card" data-id="matsu" data-limit="7">
+          <div class="card-badge remaining-badge" style="display: none; background: var(--color-accent);">残り <span
+              class="count">7</span> 個</div>
+          <h3 class="card-title">松 (MATSU)</h3>
+          <p class="card-target">コアファン</p>
+          <div class="card-price">79,800円 <span style="font-size: 0.8rem; font-weight: normal">(税込)</span></div>
+          <div class="total-value-box">
+            <p class="total-value-text">中身総額 100,000円 相当</p>
+          </div>
+          <ul class="card-details">
+            <li><span>✦ コアファン向け豪華セット</span></li>
+            <li><span>✦ 圧倒的なボリュームと満足感</span></li>
+            <li><span>✦ 未発売新作1点確定封入</span></li>
+            <li><span>✦ 特別な一点物が入る可能性も...？</span></li>
+          </ul>
+          <div style="margin-top: 2rem;">
+            <button class="btn btn-disabled btn-presale" style="width: 100%;" disabled>COMING SOON</button>
+            <button class="btn btn-primary btn-onsale" style="width: 100%; display: none;">カートに入れる</button>
+          </div>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="product-card premium" data-id="premium" data-limit="1">
+          <div class="card-badge">抽選販売・限定1個</div>
+
+          <!-- Premium Layout is slightly different via CSS -->
+          <div class="premium-content">
+            <h3 class="card-title">プレミアム (PREMIUM)</h3>
+            <p class="card-target">コレクター</p>
+            <div class="card-price">258,000円 <span style="font-size: 0.8rem; font-weight: normal">(税込)</span></div>
+            <div class="total-value-box">
+              <p class="total-value-text">中身総額 294,600円 相当</p>
+            </div>
+            <ul class="card-details">
+              <li><span>✦ 限定1個・抽選販売</span></li>
+              <li><span>✦ 最高峰のコレクション</span></li>
+              <li><span>✦ 全ての新作アイテムを網羅</span></li>
+              <li><span>✦ デザイナーによる特別選定品</span></li>
+            </ul>
+            <div style="margin-top: 2rem;">
+              <button class="btn btn-disabled btn-presale" style="width: 100%;" disabled>COMING SOON</button>
+              <button class="btn btn-primary btn-onsale" style="width: 100%; display: none;">抽選に応募する</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="newsletter-box">
+        <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">先行情報を受け取る</h3>
+        <p style="margin-bottom: 1rem; color: #aaa;">
+          福袋の販売開始通知や、<br>限定アイテムの情報をいち早くお届けします。
+        </p>
+        <div class="input-group">
+          <input type="email" placeholder="メールアドレス" class="input-field">
+          <button class="btn btn-primary">登録</button>
+        </div>
+      </div>
+
+      <div class="logo" style="margin-bottom: 2rem;">
+        伝統屋 <span>暁</span>
+      </div>
+
+      <p style="font-size: 0.8rem; color: #666;">
+        &copy; 2026 Dentoya Akatsuki. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
