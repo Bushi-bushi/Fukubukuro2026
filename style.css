@@ -15,12 +15,13 @@
     font-family: var(--font-sans);
     line-height: 1.6;
     font-weight: 400;
-    color: var(--color-text);
+    color: #ffffff;
     background-color: var(--color-bg);
-    background-image: url('assets/bg-pattern.png');
+    /* 暗くするためのグラデーションレイヤーを追加 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/bg-pattern.png');
     background-repeat: repeat;
     background-size: 300px;
-    background-blend-mode: overlay;
+    background-blend-mode: normal;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
