@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Configuration
-    const SALE_START_DATE = '2025-12-15T12:00:00';
+    const SALE_START_DATE = '2025-12-15T12:00:00+09:00'; // 日本時間 (JST)
 
     // Check parameters
     const params = new URLSearchParams(window.location.search);
