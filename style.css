@@ -47,7 +47,7 @@ body::before {
     height: 100%;
     background-image: url('assets/bg-pattern.png');
     background-repeat: repeat;
-    background-size: 450px;
+    background-size: 600px;
     opacity: 0.15;
     /* うっすら見える程度に抑える */
     z-index: -2;
