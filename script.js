@@ -81,5 +81,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Scroll Animation Observer
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Run once
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(element => {
+        observer.observe(element);
+    });
+
     console.log(`App initialized. Mode: ${isOnSale ? 'On Sale' : 'Pre-Sale'}`);
 });

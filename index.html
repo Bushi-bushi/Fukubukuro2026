@@ -37,7 +37,7 @@
   <header class="header">
     <div class="container header-content">
       <div class="logo">
-        伝統屋 <span>暁</span>
+        <img src="assets/logo.png" alt="伝統屋 暁">
       </div>
     </div>
   </header>
@@ -65,7 +65,7 @@
         <!-- Pre-Sale Banner -->
         <div id="pre-sale-banner">
           <p style="margin-bottom: 1rem;">
-            販売開始：2025年12月15日(月) 12:00〜 <br>
+            販売期間：2025年12月15日(月) 12:00 〜 12月28日(日) 23:59 <br>
             <span style="font-size: 0.9rem; color: #888;">※プレミアムは抽選受付となります</span>
           </p>
           <button class="btn btn-disabled" disabled>
@@ -86,26 +86,46 @@
       </div>
     </section>
 
+    <!-- Material Section -->
+    <section class="py-16 container reveal-on-scroll">
+      <div class="material-content">
+        <div class="material-image-box">
+          <img src="assets/tamahagane.jpg" alt="玉鋼 - Tamahagane" class="material-image">
+        </div>
+        <div class="material-text">
+          <h2 class="section-title" style="text-align: left; transform: none; left: 0; margin-bottom: 1.5rem;">
+            神話が宿る鉄、<br>玉鋼。
+          </h2>
+          <p class="material-description">
+            「たたら製鉄」という千年の歴史を持つ古来の技法でのみ生み出される、純度高き鉄。<br><br>
+            日本刀の命となるこの素材は、一瞬の煌めきと永遠の美しさを秘めています。<br>
+            2026年の福袋には、この希少な玉鋼を用いた特別なアクセサリーをご用意しました。<br>
+            <span class="gold-text">歴史を纏う感動</span>を、あなたのもとへ。
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Features Section -->
     <section class="py-16" style="background: rgba(255,255,255,0.02)">
       <div class="container">
         <h2 class="section-title">暁のお約束</h2>
         <div class="features-grid">
-          <div class="feature-item">
+          <div class="feature-item reveal-on-scroll">
             <div class="feature-icon">✦</div>
             <h3 class="feature-title">未発売新作を封入</h3>
             <p class="feature-desc">
               この福袋でしか手に入らない、<br>あるいは一般発売前の新作が<br>必ず1点含まれます。
             </p>
           </div>
-          <div class="feature-item">
+          <div class="feature-item reveal-on-scroll">
             <div class="feature-icon">↺</div>
             <h3 class="feature-title">安心の交換保証</h3>
             <p class="feature-desc">
               色味や、ピアス・イヤリングのタイプが<br>合わない場合、1回に限り<br>無償で交換対応いたします。
             </p>
           </div>
-          <div class="feature-item">
+          <div class="feature-item reveal-on-scroll">
             <div class="feature-icon">⚒</div>
             <h3 class="feature-title">完全受注生産</h3>
             <p class="feature-desc">
@@ -128,11 +148,9 @@
         <!-- Products will be rendered here by JS or statically defined below -->
 
         <!-- UME -->
-        <div class="product-card" data-id="ume" data-limit="20">
-          <div class="card-badge remaining-badge" style="display: none; background: var(--color-accent);">残り <span
-              class="count">20</span> 個</div>
+        <div class="product-card reveal-on-scroll" data-id="ume" data-limit="20">
+          <div class="card-badge">限定20個</div>
           <h3 class="card-title">梅 (UME)</h3>
-          <p class="card-target">初めての方／ライト層</p>
           <div class="card-price">14,800円 <span style="font-size: 0.8rem; font-weight: normal">(税込)</span></div>
           <div class="total-value-box">
             <p class="total-value-text">中身総額 25,000円 相当</p>
@@ -149,11 +167,9 @@
         </div>
 
         <!-- TAKE -->
-        <div class="product-card" data-id="take" data-limit="15">
-          <div class="card-badge remaining-badge" style="display: none; background: var(--color-accent);">残り <span
-              class="count">15</span> 個</div>
+        <div class="product-card reveal-on-scroll" data-id="take" data-limit="15">
+          <div class="card-badge">限定15個</div>
           <h3 class="card-title">竹 (TAKE)</h3>
-          <p class="card-target">リピーター／メイン層</p>
           <div class="card-price">25,800円 <span style="font-size: 0.8rem; font-weight: normal">(税込)</span></div>
           <div class="total-value-box">
             <p class="total-value-text">中身総額 37,000円 相当</p>
@@ -171,11 +187,9 @@
         </div>
 
         <!-- MATSU -->
-        <div class="product-card" data-id="matsu" data-limit="7">
-          <div class="card-badge remaining-badge" style="display: none; background: var(--color-accent);">残り <span
-              class="count">7</span> 個</div>
+        <div class="product-card reveal-on-scroll" data-id="matsu" data-limit="7">
+          <div class="card-badge">限定7個</div>
           <h3 class="card-title">松 (MATSU)</h3>
-          <p class="card-target">コアファン</p>
           <div class="card-price">79,800円 <span style="font-size: 0.8rem; font-weight: normal">(税込)</span></div>
           <div class="total-value-box">
             <p class="total-value-text">中身総額 100,000円 相当</p>
@@ -193,13 +207,12 @@
         </div>
 
         <!-- PREMIUM -->
-        <div class="product-card premium" data-id="premium" data-limit="1">
+        <div class="product-card premium reveal-on-scroll" data-id="premium" data-limit="1">
           <div class="card-badge">抽選販売・限定1個</div>
 
           <!-- Premium Layout is slightly different via CSS -->
           <div class="premium-content">
             <h3 class="card-title">プレミアム (PREMIUM)</h3>
-            <p class="card-target">コレクター</p>
             <div class="card-price">258,000円 <span style="font-size: 0.8rem; font-weight: normal">(税込)</span></div>
             <div class="total-value-box">
               <p class="total-value-text">中身総額 294,600円 相当</p>
@@ -224,7 +237,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="newsletter-box">
+      <div class="newsletter-box reveal-on-scroll">
         <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">先行情報を受け取る</h3>
         <p style="margin-bottom: 1rem; color: #aaa;">
           福袋の販売開始通知や、<br>限定アイテムの情報をいち早くお届けします。
@@ -236,7 +249,7 @@
       </div>
 
       <div class="logo" style="margin-bottom: 2rem;">
-        伝統屋 <span>暁</span>
+        <img src="assets/logo.png" alt="伝統屋 暁">
       </div>
 
       <p style="font-size: 0.8rem; color: #666;">
