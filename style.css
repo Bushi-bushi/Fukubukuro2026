@@ -486,12 +486,13 @@ button {
 /* Product Image */
 .product-image-container {
     width: 100%;
-    height: auto;
-    /* 固定高さを廃止し、画像に合わせて自動調整 */
+    /* Limit maximum width to keep it looking manageable and ensure square shape isn't too huge on wide cards */
+    max-width: 400px;
+    margin: 0 auto 1.5rem auto;
+    /* Center horizontally */
     aspect-ratio: 1 / 1;
-    /* レイアウト崩れ防止のため正方形比率を確保 */
     overflow: hidden;
-    margin-bottom: 1.5rem;
+    position: relative;
     border-radius: 4px;
     border-bottom: 1px solid rgba(197, 160, 89, 0.2);
 }
