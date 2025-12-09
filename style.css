@@ -448,14 +448,15 @@ button {
 
 /* Features Section */
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 @media (max-width: 768px) {
     .features-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 }
 
@@ -464,6 +465,9 @@ button {
     padding: 30px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    flex: 1 1 300px;
+    max-width: 400px;
+    width: 100%;
 }
 
 .feature-icon {
